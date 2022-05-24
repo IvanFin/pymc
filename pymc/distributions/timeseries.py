@@ -666,6 +666,20 @@ class GARCH11(distribution.Continuous):
         initial_vol >= 0, initial volatility, sigma_0
     """
 
+    def __new__(
+        cls,
+        name: str,
+        *args,
+        rng=None,
+        dims: Optional[Dims] = None,
+        initval=None,
+        observed=None,
+        total_size=None,
+        transform=...,
+        **kwargs,
+    ) -> RandomVariable:
+        raise NotImplementedError("GARCH11 is not yet refactored for pymc v4")
+
     def __init__(self, omega, alpha_1, beta_1, initial_vol, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
@@ -722,6 +736,20 @@ class EulerMaruyama(distribution.Continuous):
     sde_pars: tuple
         parameters of the SDE, passed as ``*args`` to ``sde_fn``
     """
+
+    def __new__(
+        cls,
+        name: str,
+        *args,
+        rng=None,
+        dims: Optional[Dims] = None,
+        initval=None,
+        observed=None,
+        total_size=None,
+        transform=...,
+        **kwargs,
+    ) -> RandomVariable:
+        raise NotImplementedError("EulerMaruyama is not yet refactored for pymc v4")
 
     def __init__(self, dt, sde_fn, sde_pars, *args, **kwds):
         super().__init__(*args, **kwds)
