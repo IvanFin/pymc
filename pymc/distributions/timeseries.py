@@ -678,7 +678,7 @@ class GARCH11(distribution.Continuous):
         transform=...,
         **kwargs,
     ) -> RandomVariable:
-        raise NotImplementedError("GARCH11 is not yet refactored for pymc v4")
+        raise NotImplementedError("GARCH11 has not yet been ported to PyMC 4.0.")
 
     def __init__(self, omega, alpha_1, beta_1, initial_vol, *args, **kwargs):
         super().__init__(*args, **kwargs)
