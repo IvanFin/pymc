@@ -749,7 +749,7 @@ class EulerMaruyama(distribution.Continuous):
         transform=...,
         **kwargs,
     ) -> RandomVariable:
-        raise NotImplementedError("EulerMaruyama is not yet refactored for pymc v4")
+        raise NotImplementedError("EulerMaruyama has not yet been ported to PyMC 4.0.")
 
     def __init__(self, dt, sde_fn, sde_pars, *args, **kwds):
         super().__init__(*args, **kwds)
